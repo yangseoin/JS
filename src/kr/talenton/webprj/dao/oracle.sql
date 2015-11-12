@@ -1,0 +1,11 @@
+-- MemberDao.getMember(int page)
+
+SELECT * FROM
+(SELECT ROWNUM NUM, A.*
+ FROM 
+ (SELECT *FROM MEMBERS ORDER BY REGDATE DESC) 
+ A)
+WHERE NUM BETWEEN 1 AND 10;
+  
+  
+
